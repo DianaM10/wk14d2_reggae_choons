@@ -8,8 +8,8 @@ var MusicList = React.createClass({
     var choons = this.props.music.map(function(choon, index) {
       return (
         <li key={index}> 
-          Title: {choon["im:name"]["label"]}
-          By:{choon["im:artist"]["label"]}
+          <p>Title: {choon["im:name"]["label"]}</p>
+          <p>By:{choon["im:artist"]["label"]}</p>
           <img src={choon["im:image"][2]["label"]}/>
         </li>
          /* key={index}
