@@ -7,17 +7,21 @@ var MusicList = React.createClass({
         console.log('props', this.props)
     var choons = this.props.music.map(function(choon, index) {
       return (
-        <MusicList
-          key={index}
+        <li key={index}> 
+          Title: {choon["im:name"]["label"]}
+          By:{choon["im:artist"]["label"]}
+          <img src={choon["im:image"][2]["label"]}/>
+        </li>
+         /* key={index}
           title={choon["im:name"]["label"]}
           artist={choon["im:artist"]["label"]}
-          image={choon["im:image"][2]["label"]}/>
+          image={choon["im:image"][2]["label"]}/>*/
         );
     })
     return (
-      <div>
+      <ul>
       { choons }
-      </div>
+      </ul>
       )
   }
   });
