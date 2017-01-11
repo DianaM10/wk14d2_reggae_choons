@@ -1,9 +1,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var MusicContainer = require('./containers/MusicContainer');
 
 window.onload = function(){
   ReactDOM.render(
-    <h1> App Started </h1>,
+    <MusicContainer />,
     document.getElementById('app')
   );
 }
